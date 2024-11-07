@@ -1,6 +1,12 @@
-import { defineDb } from 'astro:db';
+import { defineDb, defineTable, column } from 'astro:db';
 
-// https://astro.build/db/config
+const Tool = defineTable({
+  columns: {
+    id: column.number({ primaryKey: true }),
+    tool: column.text()
+  }
+})
+
 export default defineDb({
-  tables: {}
+  tables: { Tool }
 });

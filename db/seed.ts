@@ -1,6 +1,8 @@
-import { db } from 'astro:db';
+import { db, Tool } from "astro:db";
 
-// https://astro.build/db/seed
 export default async function seed() {
-	// TODO
+	await db.insert(Tool).values([
+		{ id: 1, tool: "Give nuqs a shot its great" },
+		{ id: 2, tool: "Hono is excellent for api design" }
+	])
 }
