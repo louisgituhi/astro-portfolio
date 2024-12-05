@@ -1,7 +1,8 @@
 ---
-import { slide, ViewTransitions } from "astro:transitions";
+import { ViewTransitions } from "astro:transitions";
 const pageTitle = "CV"
 import Link from "../components/link.astro";
+import "@/styles/globals.css"
 ---
 
 <html lang="en">
@@ -27,15 +28,16 @@ import Link from "../components/link.astro";
         <title>{pageTitle}</title>
         <ViewTransitions />
 	</head>
+
     <body transition:animate="slide" class=" w-[80%] mx-auto md:max-w-xl my-10 md:mx-auto font-inter">
         
-        <Link />
+        <Link/>
         <div class=" mt-12">
             <div class=" text-sm">
                 <h2 class=" text-md font-bold">Louis Wanyika</h2>
                 <p>Fullstack Web Developer.</p>
                 <p>Contact: 0759397500</p>
-                <p>Email: louisgituhi@gmail.com</p>
+                <p class="">Email: louisgituhi@gmail.com</p>
                 <span>Kenya</span>
                 <span class=" ml-5">Nairobi</span>
                 <span class=" ml-5">EAT</span>
@@ -68,10 +70,8 @@ import Link from "../components/link.astro";
                 <span class=" ml-4 text-neutral-500 text-sm">2023-2024</span>
                 <h2 class=" text-sm">Junior Front-end Engineer</h2>
                 <div class=" text-sm mt-4">
-                    <p class=" text-sm mt-4">I took charge for the design and successfull 
-                        deployment of econo construction company
-                        website. The design was user intuitive and user-friendly. I also ensured
-                        it had better seo queries to drive traffic and excellent performance.
+                    <p class=" text-sm mt-4">I took charge for the design and successful deployment of econo-construction company website. 
+                        The design was user intuitive and user-friendly. I also ensured it had better Seo queries to drive traffic and excellent performance..
                     </p>
                     <p>Technologies: Astro js and Javascript.</p>
                 </div>
@@ -81,20 +81,19 @@ import Link from "../components/link.astro";
                 <span class="text-md font-semibold">County Government of Nyandarua</span>
                 <span class=" ml-4 text-neutral-500 text-sm">2022</span>
                 <h2 class=" text-sm">Junior ICT Officer</h2>
-                <p class=" text-sm mt-4">I assisted the ICT Officer in network maintenance, establishing LAN networks under
-                    windows XP, windows 7/8/10 and windows server 2012 Standard Environment.<br>
-                    Network troubleshooting creating network users and maintaining operational procedures.
-                    Network installation, configuration and termination of RJ45 cables.<br>
-                    Hardware and software installations as well as repair and maintenance of computer systems.
-                    Troubleshooting and maintenance of unified communication systems.
-                    Creationg and restoration of Back-ups.
+                <p class=" text-sm mt-4">I assisted the ICT Officer in network maintenance, 
+                    establishing LAN networks under windows XP, windows 7/8/10 and windows server 2012 Standard Environment.
+                    Network troubleshooting creating network users and maintaining operational procedures. 
+                    Network installation, configuration and termination of RJ45 cables.
+                    Hardware and software installations as well as repair and maintenance of computer systems. 
+                    Troubleshooting and maintenance of unified communication systems. Creation and restoration of Back-ups..
                 </p>
             </div>
 
             <div class=" mt-20">
                 <h2 class="text-md font-bold text-lg">Education</h2>
                     <div class=" mt-4">
-                        <span class="text-md">Murang'a University of Techonology</span>
+                        <span class="text-md">Murang'a University of Technology</span>
                         <span class=" ml-10 text-neutral-500 text-sm">2019-2023</span>
                         <h2 class=" text-sm">Bachelor's Degree in Software Engineering</h2>
                         <p class=" text-neutral-500 text-sm">Class: Second Class Upper-Division</p>
@@ -124,7 +123,7 @@ import Link from "../components/link.astro";
 
                 <div class=" mt-4 text-sm">
                     <h4>Leah Wangeci Nderitu</h4>
-                    <h4>Branch Manager, VIktas Sacco</h4>
+                    <h4>Branch Manager, Viktas Sacco</h4>
                     <h4>0723518257</h4>
                 </div>
 
