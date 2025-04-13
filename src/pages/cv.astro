@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 const pageTitle = "CV"
 import Link from "../components/link.astro";
 import "@/styles/globals.css"
@@ -26,7 +26,7 @@ import "@/styles/globals.css"
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
         <title>{pageTitle}</title>
-        <ViewTransitions />
+        <ClientRouter />
 	</head>
 
     <body transition:animate="slide" class=" w-[80%] mx-auto md:max-w-xl my-10 md:mx-auto font-inter">
