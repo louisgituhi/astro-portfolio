@@ -1,6 +1,6 @@
 ---
 import "@/styles/globals.css"
-import { slide, ViewTransitions } from "astro:transitions"
+import { slide, ClientRouter } from "astro:transitions"
 import Connect from "../components/connect.astro"
 import Projects from "../components/projects.astro"
 import Header from "../components/header.astro"
@@ -14,7 +14,7 @@ const pageTitle = "Louis Wanyika"
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" transition:name="name" transition:animate="none">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -38,10 +38,11 @@ const pageTitle = "Louis Wanyika"
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
-		<ViewTransitions />
+		<ClientRouter />
 	</head>
 
-    <body transition:animate="slide" class=" w-[80%] mx-auto md:max-w-xl my-10 md:mx-auto font-geist bg-[#FBFCFA] text-[#36454F] dark:bg-[#060605] dark:text-white">
+    <body transition:animate="slide"
+		class=" w-[80%] mx-auto md:max-w-xl my-10 md:mx-auto font-geist bg-[#FBFCFA] text-[#36454F] dark:bg-[#060605] dark:text-white">
 
         <Header /> 
 
