@@ -1,12 +1,26 @@
 ---
-import ThemeSwitcher from "./theme-switcher"
+import { Image } from "astro:assets"
+import Louis from "../assets/louis.jpeg"
 ---
-<header class=" tracking-wide leading-6">
-    <nav class=" flex items-center justify-between w-full">
-        <div class="text-sm flex items-center gap-2">
-            <span class=" size-2 bg-orange-500 rounded-full"></span>
-            <h2 class=" text-sm text-gray-600 dark:text-white">LOUIS GITUHI</h2>
+<header class="tracking-wide leading-6 text-white">
+    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full">
+        <div class="text-sm flex-1">
+            <h1 class="text-3xl font-vt">Louis Gituhi</h1>
+            <h2 class=" text-slate-200 text-lg">Software Engineer and IT Admin</h2>
+            <p class="text-md tracking-wide leading-6 mt-2">
+                Hi, I'm Louis Gituhi, a software engineer from Nairobi.
+                Currently I am working at Kingdom Bank as IT Administrator.
+                Occasionally you will find me on the pitch playing football — I'm a goalkeeper.
+            </p>
+            <div class=" mt-2 text-md">
+                <a href="mailto:louisgituhi@gmail.com" class=" underline underline-offset-4 decoration-2 decoration-fuchsia-200">Email me</a>
+                <a href="/cv/" class="underline underline-offset-4 decoration-2 decoration-fuchsia-200">cv</>
+            </div>
         </div>
-        <ThemeSwitcher client:load />
-    </nav>
+        <Image
+            class="w-full h-auto rounded-sm object-cover sm:w-[480px] sm:h-[280px]"
+            src={Louis}
+            alt="my image"
+        />
+    </div>
 </header>

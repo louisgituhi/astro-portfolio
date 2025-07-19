@@ -5,9 +5,9 @@ export default {
 	theme: {
     	extend: {
     		fontFamily: {
-				"geist": ["Geist", "sans-serif"],
-    			'inter': ["Inter", "sans-serif"],
-    			'sacramento': ["Sacramento", "cursive"]
+    			'sacramento': ["Sacramento", "cursive"],
+				'vt': ["VT323", "monospace"],
+				'solata': ["Inconsolata", "monospace"]
     		},
     		borderRadius: {
     			lg: 'var(--radius)',
