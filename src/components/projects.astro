@@ -1,5 +1,12 @@
 ---
     import App from "./fetch"
+    import Image from "astro/components/Image.astro"
+    import Tanstack from "../assets/tanstack.svg"
+    import Bun from "../assets/bun.svg"
+    import Neon from "../assets/neon.svg"
+    import Hono from "../assets/hono.svg"
+    import Workers from "../assets/cloudflare-workers.svg"
+    import Vercel from "../assets/vercel.svg"
 ---
 
 <section class=" mt-10 tracking-wide leading-6">
@@ -9,10 +16,15 @@
             <h4 class=" text-sm font-semibold">Planck</h4>
             <p class=" text-sm text-gray-600 dark:text-white">
                 A physicist API endpoint - 
-                    <a href="https://github.com/louisgituhi/planck" 
-                        class=" text-black underline decoration-wavy cursor-pointer dark:text-gray-600">github</a>, 
-                    <a href="https://planck.louisgituhi.workers.dev/" 
-                        class="text-black underline decoration-wavy cursor-pointer dark:text-gray-600">link</a>.
+                <span class="flex items-center gap-1">
+                    <Image src={ Hono } alt="hono logo" width={14} height={14} /> 
+                    <Image src={ Bun } alt="Bun logo" width={18} height={18} />
+                    <Image src={ Workers } alt="cloudflare-workers logo" width={18} height={18} />
+                        <a href="https://github.com/louisgituhi/planck" 
+                            class=" text-black underline decoration-wavy cursor-pointer dark:text-gray-600">github</a>, 
+                        <a href="https://planck.louisgituhi.workers.dev/" 
+                            class="text-black underline decoration-wavy cursor-pointer dark:text-gray-600">link</a>.
+                </span>
             </p>
             <span class=" text-xs text-gray-600 dark:text-white">
                 <App client:load/>
@@ -23,10 +35,16 @@
             <h4 class=" text-sm font-semibold">Fuyu</h4>
             <p class=" text-sm text-gray-600 dark:text-white">
                 A neat webapp to help track your expenses with powerful analytics - 
+                <span class="flex items-center gap-1">
+                    <Image src={ Neon } alt="neon logo" width={18} height={18} /> 
+                    <Image src={ Tanstack } alt="tanstack logo" width={18} height={18} />
+                    <Image src={ Bun } alt="Bun logo" width={18} height={18} />
+                    <Image src={ Vercel } alt="Vercel logo" width={18} height={18} />
                     <a href="https://github.com/louisgituhi/fuyu"
                         class=" text-black underline decoration-wavy cursor-pointer dark:text-gray-600">github</a>, 
                     <a href="https://fuyu-eta.vercel.app/" 
                         class="text-black underline decoration-wavy cursor-pointer dark:text-gray-600">link</a>.
+                </span>
             </p>
         </div>
 </section>
