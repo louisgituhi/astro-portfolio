@@ -1,12 +1,13 @@
 ---
-    import App from "./fetch"
-    import Image from "astro/components/Image.astro"
-    import Tanstack from "../assets/tanstack.svg"
-    import Bun from "../assets/bun.svg"
-    import Neon from "../assets/neon.svg"
-    import Hono from "../assets/hono.svg"
-    import Workers from "../assets/cloudflare-workers.svg"
-    import Vercel from "../assets/vercel.svg"
+import App from "./fetch";
+import FuyuCommits from "./fuyu.tsx";
+import Image from "astro/components/Image.astro";
+import Tanstack from "../assets/tanstack.svg";
+import Bun from "../assets/bun.svg";
+import Neon from "../assets/neon.svg";
+import Hono from "../assets/hono.svg";
+import Workers from "../assets/cloudflare-workers.svg";
+import Vercel from "../assets/vercel.svg";
 ---
 
 <section class=" mt-10 tracking-wide leading-6">
@@ -26,7 +27,7 @@
                             class="text-white underline decoration-wavy cursor-pointer">link</a>.
                 </span>
             </p>
-            <span class=" text-xstext-white">
+            <span class=" text-xs text-white">
                 <App client:load/>
             </span>
         </div>
@@ -45,6 +46,9 @@
                     <a href="https://fuyu-eta.vercel.app/" 
                         class="text-white underline decoration-wavy cursor-pointer">link</a>.
                 </span>
-            </p>
+		</p>
+		<span class="text-xs text-white">
+			<FuyuCommits client:load />
+		</span>
         </div>
 </section>
