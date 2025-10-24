@@ -10,9 +10,48 @@ import Hono from "../assets/hono.svg";
 import Neon from "../assets/neon.svg";
 import Tanstack from "../assets/tanstack.svg";
 import Vercel from "../assets/vercel.svg";
-import App from "./fetch";
-import FuyuCommits from "./fuyu.tsx";
-import Statut from "./statut.tsx";
+
+const formatter = new Intl.RelativeTimeFormat("en-US");
+
+const statut = await fetch(
+	"https://api.github.com/repos/louisgituhi/statut/commits?per_page=1",
+);
+
+const statutData = await statut.json();
+
+const statutCommit = statutData[0].commit;
+const statutCommitDate = statutCommit.committer.date;
+
+const statutDateDiff =
+	new Date(statutCommitDate).getTime() - new Date().getTime();
+const statutDayDifference = Math.round(statutDateDiff / (1000 * 60 * 60 * 24));
+const statutFormattedDate = formatter.format(statutDayDifference, "days");
+
+const fuyu = await fetch(
+	"https://api.github.com/repos/louisgituhi/fuyu/commits?per_page=1",
+);
+
+const fuyuData = await fuyu.json();
+
+const fuyuCommit = fuyuData[0].commit;
+const fuyuCommitDate = fuyuCommit.committer.date;
+
+const fuyuDateDiff = new Date(fuyuCommitDate).getTime() - new Date().getTime();
+const fuyuDayDifference = Math.round(fuyuDateDiff / (1000 * 60 * 60 * 24));
+const fuyuFormattedDate = formatter.format(fuyuDayDifference, "days");
+
+const planck = await fetch(
+	"https://api.github.com/repos/louisgituhi/planck/commits?per_page=1",
+);
+const planckData = await planck.json();
+
+const planckCommit = planckData[0].commit;
+const planckCommitDate = planckCommit.committer.date;
+
+const planckDateDiff =
+	new Date(planckCommitDate).getTime() - new Date().getTime();
+const planckDayDifference = Math.round(planckDateDiff / (1000 * 60 * 60 * 24));
+const planckFormattedDate = formatter.format(planckDayDifference, "days");
 ---
 
 <section class=" mt-10 tracking-wide leading-6">
@@ -32,8 +71,7 @@ import Statut from "./statut.tsx";
                             class="underline decoration-wavy cursor-pointer">link</a>.
                 </span>
             </p>
-            <span class=" text-xs">
-                <App client:load/>
+		<span class=" text-xs text-green-500">{ planckFormattedDate }
             </span>
         </div>
 
@@ -55,8 +93,7 @@ import Statut from "./statut.tsx";
                         class="underline decoration-wavy cursor-pointer">link</a>.
                 </span>
 		</p>
-		<span class="text-xs">
-			<FuyuCommits client:load />
+		<span class="text-xs text-green-500"> { fuyuFormattedDate }
 		</span>
 	</div>
 	<div class="mt-4">
@@ -83,8 +120,7 @@ import Statut from "./statut.tsx";
 class=" underline decoration-wavy cursor-pointer">github</a>
 			</span>
 		</p>
-		<span class="text-xs">
-<Statut client:load />
+		<span class="text-xs text-green-500"> { statutFormattedDate }
 		</span>
 	</div>
 </section>
