@@ -1,9 +1,7 @@
 ---
 import { ClientRouter } from "astro:transitions";
 const pageTitle = "Blog";
-import Link from "../components/link.astro";
 import "@/styles/globals.css";
-import { ArrowLeftIcon } from "../components/left-arrow";
 ---
 
 <html lang="en">
@@ -28,7 +26,6 @@ import { ArrowLeftIcon } from "../components/left-arrow";
 	</head>
 
 	<body transition:animate="slide" class=" w-[80%] mx-auto md:max-w-xl my-10 md:mx-auto font-inter">
-		<Link/>
         <div class=" mt-12">
 			<div class=" text-sm">
 <div>Hello this is my blogs page</div>
