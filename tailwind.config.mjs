@@ -1,3 +1,4 @@
+import typography from "@tailwindcss/typography";
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -6,6 +7,7 @@ export default {
 		extend: {
 			fontFamily: {
 				commitmono: ["CommitMono", "monospace"],
+				bricolage: ["Bricolage Grotesque", "sans-serif"],
 				sacramento: ["Sacramento", "cursive"],
 				vt: ["VT323", "monospace"],
 				solata: ["Inconsolata", "monospace"],
@@ -59,5 +61,5 @@ export default {
 			},
 		},
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [require("tailwindcss-animate"), typography],
 };

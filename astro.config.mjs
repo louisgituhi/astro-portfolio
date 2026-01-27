@@ -8,10 +8,14 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-    image: {
-        service: passthroughImageService(),
-    },
-    integrations: [tailwind({
-        applyBaseStyles: false,
-        }), mdx(), react()],
+	image: {
+		service: passthroughImageService(),
+	},
+	integrations: [
+		tailwind({
+			applyBaseStyles: true,
+		}),
+		mdx(),
+		react(),
+	],
 });
