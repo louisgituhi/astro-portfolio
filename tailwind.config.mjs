@@ -11,6 +11,7 @@ export default {
 				sacramento: ["Sacramento", "cursive"],
 				vt: ["VT323", "monospace"],
 				solata: ["Inconsolata", "monospace"],
+				karla: ["Karla", "sans-serif"],
 			},
 			borderRadius: {
 				lg: "var(--radius)",
